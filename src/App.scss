@@ -1,0 +1,41 @@
+.topContent {
+  background-image: url(./backgr1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  justify-content: center;
+  z-index: 0;
+}
+
+.toprated_h1 {
+  color: white;
+}
+.upcoming_h1 {
+  color: white;
+  margin-right: 350px;
+}
+.title_section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.App {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+.star_1 {
+  color: red;
+  font-size: 50px;
+}
+.Main_section {
+  display: flex;
+  flex-direction: column;
+  gap: 350px;
+}

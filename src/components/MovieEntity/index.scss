@@ -1,0 +1,99 @@
+@import "../../style/mixins";
+
+.MovieEntity {
+  display: flex;
+  color: white;
+  text-transform: uppercase;
+  &__info {
+    @include flex-element(column, space-between, flex-end, nowrap, 30px);
+    display: flex;
+    @include generic-size(22%, 100vh, 40px, 0);
+  }
+
+  &__info--title {
+    transform: translate(100px, 120px);
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  &__info--bottom {
+    position: relative;
+    width: 100%;
+    align-self: flex-end;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  &__info--bottom p:nth-child(1),
+  .MovieEntity__info--bottom p:nth-child(3) {
+    color: rgb(169, 169, 169);
+  }
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  &__info--bottom--tagline {
+    position: absolute;
+    top: 0;
+    right: -30px;
+    writing-mode: vertical-rl;
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 300px;
+    transform: translateY(-80px);
+  }
+  &__poster {
+    padding: 50px;
+    width: 56%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  &__book {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 22%;
+  }
+  &__book--btn {
+    width: 200px;
+    padding: 20px 30px;
+    border: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.65);
+    transform: translate(-100px, -120px);
+    transition: all 0.35s;
+    border-radius: 2px;
+  }
+  &__book--btn:hover {
+    background-color: rgb(255, 4, 4);
+    color: white;
+  }
+}
+.up_movieEntity {
+  border: 0;
+  font-weight: bold;
+  color: red;
+  border-radius: 4px;
+  box-shadow: -1px 0px 8px 0px #ffffff28;
+  background: linear-gradient(to bottom, #2121212a 5%, #12121256 100%);
+  background-color: #e3e8e50c;
+  border-radius: 24px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 26px;
+  padding: 4px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+  align-self: flex-end;
+  margin-right: 50px;
+  margin-bottom: 150px;
+}
+.up_movieEntity:hover {
+  background: linear-gradient(to bottom, #e3e8e5b9 5%, #e3e8e5b9 100%);
+  background-color: #dbd4db29;
+  color: red;
+}

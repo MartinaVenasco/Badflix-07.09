@@ -1,0 +1,81 @@
+@import "../../style/mixins";
+
+.MainCard {
+  @include flex-element(column, center);
+  @include generic-size(700px, 400px);
+  display: flex;
+  position: relative;
+  color: white;
+  background-color: black;
+  transition: all 0.55s;
+
+  button {
+    z-index: 99999;
+  }
+
+  &--img {
+    @include element-position(absolute, 0, auto, auto, auto, 0);
+    @include generic-size(100%, 100%);
+    object-fit: cover;
+    opacity: 0.7;
+  }
+  &--img:hover {
+    opacity: 100%;
+    transform: scale(1.03);
+  }
+  &__text {
+    padding: 0 30px;
+  }
+  &__text h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+
+  &__text p {
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: bold;
+    z-index: 1;
+  }
+  &__text p::before {
+    content: "Average: ";
+    opacity: 0.7;
+  }
+  i {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+  }
+  i:hover {
+    color: rgb(181, 151, 29);
+  }
+}
+
+.i:focus {
+  color: rgb(197, 180, 50);
+  z-index: 100000;
+}
+
+.likebtn {
+  z-index: 88;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: flex-end;
+  padding-top: 240px;
+  position: absolute;
+  gap: 140px;
+}
+
+.info_icon:hover {
+  z-index: 9999;
+  transform: scale(1.5);
+  color:rgb(193, 193, 193);
+}
+.icon {cursor: pointer;
+
+  &:hover {color: red !important;}}
+ 

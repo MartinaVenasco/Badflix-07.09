@@ -1,0 +1,39 @@
+
+@mixin flex-element($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap, $gap: 0px) {
+
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+	flex-wrap: $wrap;
+	gap: $gap;
+  }
+  
+  @mixin generic-size($width: 200px, $height: auto, $padding: 0, $border: 0) {
+	width: $width;
+	height: $height;
+	padding: $padding;
+	border: $border;
+	cursor: pointer;
+	transition: all 0.35s;
+  }
+  
+  @mixin generic-hover($bg-color: $primary-color, $color: $active-text-color) {
+	background-color: $bg-color;
+	color: $color;
+  }
+  
+  @mixin box-model($margin: 0, $border: 0, $padding: 0) {
+	margin: $margin;
+	border: $border;
+	padding: $padding;
+  }
+  
+  @mixin element-position($position: static, $top: auto, $right: auto, $bottom: auto, $left: auto, $z-index: 1) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	z-index: $z-index;
+  }

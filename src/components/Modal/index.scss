@@ -1,0 +1,59 @@
+@import '../../style/mixins';
+
+
+.Modal {
+  @include element-position( absolute, 20%, 50%, auto, 30%, 2);
+  width: 600px;
+  height: 400px;
+  background-color: rgba(43, 42, 42, 0.744);
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.543);
+  
+  
+  &__header {
+    margin-left: 20px;
+  }
+  &__overlay { @include element-position (fixed, 0 , auto, auto, 0 ,9999);
+    
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100vw;
+    height: 100vh;
+
+  }
+  &__desc {
+    padding: 0 20px;
+    padding-bottom: 0;
+  }
+
+  .my__series {
+    display: flex;
+  }
+  .my_container_series {
+    margin-left: 20px;
+  }
+  &__img {
+    width: 300px;
+  
+    height: 400px;
+  }
+  .vote {
+    align-self: flex-end;
+    margin-bottom: 50px;
+    margin-top: 0;
+  }
+  .average {
+    @include flex-element(row, flex-end);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+  
+}
+
+
