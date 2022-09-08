@@ -29,6 +29,7 @@
   background-color: black;
   display: flex;
   flex-direction: column;
+ 
 }
 .star_1 {
   color: red;
@@ -38,4 +39,21 @@
   display: flex;
   flex-direction: column;
   gap: 350px;
+
 }
+
+
+
+@media only screen and (max-width: 768px) {
+
+.topContent {
+  background-image: url(./backgr1.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  display: flex;
+  flex-direction: column;
+height: 150px;
+  justify-content: center;
+  z-index: 0;
+  }}

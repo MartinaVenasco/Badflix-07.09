@@ -42,7 +42,6 @@ function App() {
         isRendered={isRendered}
         onFormsubmit={setRendered}
        
-     
       /></div>
       <MovieEntity
         movieID={inputValue}

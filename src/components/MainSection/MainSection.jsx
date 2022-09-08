@@ -11,7 +11,7 @@ import FavoriteList from "../FavoriteList";
 
 const MainSection = ({ modalVisibility, TopRated, UpComing, ScrollTop }) => {
   const [movieLists, setMovieLists] = useState({});
-
+  const [isUpvisible, setUpvisible] = useState(false);
   const [favouriteList, setFavouriteList] = useState([]);
 
   const [page, setPage] = useState(5);
@@ -40,7 +40,13 @@ const MainSection = ({ modalVisibility, TopRated, UpComing, ScrollTop }) => {
       behavior: "smooth",
     });
   };
-
+  useEffect(() => {
+    window.addEventListener("scroll", () =>
+      window.scrollY >= 500
+        ? setUpvisible(true)
+        : setUpvisible(false)
+    );
+  }, []);
   return (
     <div className="MainSection" scrolltop={ScrollTop}>
       <div className="Voted">
@@ -67,13 +73,9 @@ const MainSection = ({ modalVisibility, TopRated, UpComing, ScrollTop }) => {
         />
       )}
       <div className="TopRated_Section" ref={TopRated}>
-        <h1 className="toprated">
+        <h1>
           {" "}
-          <span>T</span>
-          <span>o</span>
-          <span>p</span> <span>R</span>
-          <span>a</span>
-          <span>t</span>
+          <span>T</span><span>o</span><span>p</span> <span>R</span><span>a</span><span>t</span>
           <span>e</span>
           <span>d</span>{" "}
           <i className="star_1">
@@ -90,14 +92,14 @@ const MainSection = ({ modalVisibility, TopRated, UpComing, ScrollTop }) => {
           />
         )}
        
-          <button className="up" onClick={scrollTop}>
+        {isUpvisible && (<button className="up" onClick={scrollTop}>
             <GoTriangleUp />
-          </button>
+          </button>)}
         
       </div>
       <div className="UpComing_Section" ref={UpComing}>
         {" "}
-        <h1 className="toprated">
+        <h1>
           {" "}
           <span>U</span>
           <span>P</span> <span>C</span>

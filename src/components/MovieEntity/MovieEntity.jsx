@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { GET } from "../../utils/api.js";
-import {GoTriangleUp} from 'react-icons/go';
 import "./index.scss";
 
 const MovieEntity = ({ movieID, isRendered, setInputValue, ScrollTop }) => {

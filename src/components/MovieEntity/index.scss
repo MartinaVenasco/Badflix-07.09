@@ -4,6 +4,7 @@
   display: flex;
   color: white;
   text-transform: uppercase;
+  height: 100%;
   &__info {
     @include flex-element(column, space-between, flex-end, nowrap, 30px);
     display: flex;
@@ -33,7 +34,7 @@
   }
   &__info--bottom--tagline {
     position: absolute;
-    top: 52px;
+    top: -112px;
     right: -30px;
     writing-mode: vertical-rl;
     font-size: 1.5rem;
@@ -96,4 +97,81 @@
   background: linear-gradient(to bottom, #e3e8e5b9 5%, #e3e8e5b9 100%);
   background-color: #dbd4db29;
   color: red;
+}
+
+
+@media only screen and (max-width: 768px) { 
+
+  .MovieEntity {
+    display: flex;
+    color: white;
+    text-transform: uppercase;
+    height: 100%;
+    &__info {
+      @include flex-element(column, space-between, flex-end, nowrap, 50px);
+      display: flex;
+      @include generic-size(22%, auto, 10px, 0);
+    }
+  
+    &__info--title {
+      transform: none
+      ;
+    }
+    h1 {margin-left: 0;;
+      font-size: 1.05rem;
+    }
+    &__info--bottom {
+      position: relative;
+      width: 100%;
+      align-self: flex-end;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    &__info--bottom p:nth-child(1),
+    .MovieEntity__info--bottom p:nth-child(3) {
+      color: rgb(169, 169, 169);
+    }
+    ul {
+      padding: 0;
+      list-style-type: none;
+    }
+    &__info--bottom--tagline {
+      top: -112px;
+      right: -30px;
+      writing-mode: vertical-rl;
+      font-size: 0.5rem;
+      font-weight: bold;
+      height: 100px;
+      transform: translateY(-80px);
+    }
+    &__poster {
+   padding:3px;
+      width: 260px;
+      height: 80vh;
+     
+    }
+    &__book {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 5px;
+    }
+    &__book--btn {
+      width: 94px;
+      padding: 13px 0px;
+      border: 0;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.65);
+      transform: translate(-100px, -120px);
+      transition: all 0.35s;
+      border-radius: 2px;
+    }
+    &__book--btn:hover {
+      background-color: rgb(255, 4, 4);
+      color: white;
+    }
+  }
+
+
 }

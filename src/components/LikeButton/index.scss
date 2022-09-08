@@ -1,3 +1,9 @@
 .icon {cursor: pointer;
 
 &:hover {color: red !important;}}
+
+@media only screen and (max-width: 768px) { 
+
+
+	.likebtn {margin-top: -150px;}
+}

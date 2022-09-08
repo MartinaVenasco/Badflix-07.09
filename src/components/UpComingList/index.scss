@@ -1,4 +1,10 @@
-.UpComingList {
+.UpComing_Section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: flex-start;
+  }
+  .UpComingList {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +16,7 @@
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   scroll-padding: 20px 0 0 20px;
+  
   .UpComing__card {
     display: flex;
     scroll-snap-align: start;
@@ -20,12 +27,7 @@
     height: 400px;
     color: white;
   }
-  .UpComing_Section {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: flex-start;
-  }
+  
   .likebtn {
     z-index: 88;
     display: flex;
@@ -48,5 +50,55 @@
     &:hover {
       color: red !important;
     }
+  }
+}
+@media only screen and (max-width: 768px) {
+.UpComing_Section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      justify-content: flex-start;
+    }  
+    
+    .UpComingList {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      gap: 15px;
+      width: 100%;
+      height: 350px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      scroll-padding: 20px 0 0 20px;
+
+    .UpComing__card {
+      display: flex;
+  
+      flex-direction: column;
+      justify-content: center;
+   
+      min-width: 240px;
+      height: 280px;
+      color: white;   scroll-snap-align: start;
+      
+    }
+    
+    .likebtn {
+      z-index: 88;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+     
+      align-items: flex-end;
+      padding-top: 420px;
+      position: absolute;
+      gap: 170px;
+    }
+
+
   }
 }

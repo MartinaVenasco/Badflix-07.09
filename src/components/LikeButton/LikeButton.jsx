@@ -10,7 +10,7 @@ const LikeButton = ({ data, favouriteList, setFavouriteList, isBtnVisible }) => 
   const handleClick = () => {
     const likedValue = localStorage.getItem(`is ${data.title} Liked?`);
 
-    if (isClicked === true) {
+    if (isClicked === true ) {
       setIsClicked(!isClicked);
       localStorage.setItem(`is ${data.title} Liked?`, isClicked);
 
