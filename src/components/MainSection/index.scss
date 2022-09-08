@@ -77,7 +77,21 @@ span {
 }
 @media only screen and (max-width: 768px) {
 
-.MainSection {padding: 10px;}
+.MainSection {padding: 10px;
+
+
+  @include flex-element(column, flex-start, stretch, nowrap, 50px);
+  padding: 50px;
+  display: flex;
+
+  margin-bottom: 50px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6113795860140931) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  }
 
  
 
