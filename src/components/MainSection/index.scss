@@ -1,7 +1,7 @@
 @import "../../style/mixins";
 
 .MainSection {
-  @include flex-element(column, flex-start, stretch, nowrap, 120px);
+  @include flex-element(column, flex-start, stretch, nowrap, 30px);
   padding: 50px;
   display: flex;
 
@@ -80,7 +80,7 @@ span {
 .MainSection {padding: 10px;
 
 
-  @include flex-element(column, flex-start, stretch, nowrap, 50px);
+  @include flex-element(column, flex-start, stretch, nowrap, 30px);
   padding: 50px;
   display: flex;
 

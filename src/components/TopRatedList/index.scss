@@ -84,32 +84,30 @@
     justify-content: center;
     gap: 30px;
     width: 100%;
-    height: 390px;
-    overflow-x: scroll;
+    height: 290px;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
-    scroll-padding: 20px 0 0 20px;
+
     transition: all 0.35s; 
   } 
   .TopRated__card {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      width: 280px;
-      height: 100%;
-      color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:221px;
+    height: 216px;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    .MainCard__text {
+      padding: 0 47px;
+  }
     }
     .likebtn {
-      z-index: 88;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      align-items: flex-end;
-      padding-top: 480px;
-      position: absolute;
-      gap: 220px;
+      padding-top: 5px;
+      margin-top: 204px;
+      gap:180px;
     }
   }
 }

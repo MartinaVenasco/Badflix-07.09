@@ -14,7 +14,7 @@ const MainSection = ({ modalVisibility, TopRated, UpComing, ScrollTop }) => {
   const [isUpvisible, setUpvisible] = useState(false);
   const [favouriteList, setFavouriteList] = useState([]);
 
-  const [page, setPage] = useState(5);
+  const [page, setPage] = useState(9);
 
   useEffect(() => {
     GET("movie", "popular", "&language=en-US&page=", page).then((data) =>

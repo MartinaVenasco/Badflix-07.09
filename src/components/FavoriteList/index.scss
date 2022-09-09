@@ -1,6 +1,6 @@
 .LikedList {
   display: flex;
-  justify-content: center;
+  justify-content:flex-start;
   align-items: center;
   flex-direction: row;
   gap: 20px;
@@ -67,3 +67,73 @@ h1 {align-self: flex-start;}
   }
 
 }
+
+@media only screen and (max-width: 768px) { .LikedList {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  height: 350px;
+  margin-top: 50px;
+  
+background-color: rgba(131, 129, 129, 0.218);
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 20px 0 0 20px;
+h1 {align-self: flex-start;}
+  .LikedStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 210px;
+    height: 300px;
+    color: white;
+    z-index: 8888;
+   
+  }
+  .TopRated_Section {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: flex-start;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+    
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(125, 5, 3);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff0000;
+  }
+  .likebtn {
+    z-index: 88;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: flex-end;
+    padding-top: 390px;
+    position: absolute;
+    
+  }
+  
+  .info_icon {
+    z-index: 9999;
+    transform: scale(1.03);
+  }
+
+}}

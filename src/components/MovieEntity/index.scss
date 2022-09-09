@@ -110,7 +110,7 @@
     &__info {
       @include flex-element(column, space-between, flex-end, nowrap, 50px);
       display: flex;
-      @include generic-size(22%, auto, 10px, 0);
+      @include generic-size(22%, auto, 27px, 0);
     }
   
     &__info--title {
@@ -146,8 +146,8 @@
     }
     &__poster {
    padding:5px;
-      width: 260px;
-      height: 80vh;
+      width: 230px;
+      height: 50vh;
      
     }
     &__book {
