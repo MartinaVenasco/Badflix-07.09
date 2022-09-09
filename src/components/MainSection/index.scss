@@ -1,7 +1,7 @@
 @import "../../style/mixins";
 
 .MainSection {
-  @include flex-element(column, flex-start, stretch, nowrap, 30px);
+  @include flex-element(column, flex-start, stretch, nowrap, 20px);
   padding: 50px;
   display: flex;
 
@@ -14,7 +14,8 @@
   );
   
 .best {
-  font-weight: 100;
+  font-weight: 50;
+  margin-left: 20px;
   color: white;
 }
 
@@ -59,22 +60,13 @@
   background-color: #dbd4db29;
   color: red;
 }
-span {
-  animation: flip 5s infinite;
-  animation-delay: calc(0.2s * var(--i));
-  position: relative;
+h2 {color:white;
+margin-left: 10px;
+font-size: 3.1rem;
+}
+.star_1 {padding: 15px;
+}
 
-  font-size: 40px;
-  color: #fff;
-  text-transform: uppercase;
-  z-index: 1000;
-}
-@keyframes flip {
-  0%,
-  80% {
-    transform: rotateY(360deg);
-  }
-}
 @media only screen and (max-width: 768px) {
 
 .MainSection {padding: 10px;
@@ -92,13 +84,8 @@ span {
     rgba(0, 0, 0, 1) 100%
   );
   }
-
- 
-
-
-  h1 { margin-left: 10px;
-  font-size:smaller;}
-  
-  
-  }
+  .star_1 {padding: 5px;}
+  h2 {color:white;
+    margin-left: 0;
+  font-size: 1.8rem;}}
 

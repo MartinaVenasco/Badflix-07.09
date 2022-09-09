@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Counter from "../Counter";
-import { RiStarSLine } from "react-icons/ri";
+import { MdStar } from "react-icons/md";
 import { GoTriangleUp } from "react-icons/go";
 import TopRatedList from "../TopRatedList";
 import Voted from "../Voted";
@@ -50,10 +50,10 @@ const MainSection = ({ modalVisibility, TopRated, UpComing, ScrollTop }) => {
   return (
     <div className="MainSection" scrolltop={ScrollTop}>
       <div className="Voted">
-        <h2 className="best">
+        <h3 className="best">
           {" "}
-          TOP 5 FOR YOU 8.6 <RiStarSLine />{" "}
-        </h2>
+          TOP 5 FOR YOU 8.6 <MdStar />{" "}
+        </h3>
         {movieLists.topRated && (
           <Voted
             favouriteList={favouriteList}
@@ -73,15 +73,12 @@ const MainSection = ({ modalVisibility, TopRated, UpComing, ScrollTop }) => {
         />
       )}
       <div className="TopRated_Section" ref={TopRated}>
-        <h1>
-          {" "}
-          <span>T</span><span>o</span><span>p</span> <span>R</span><span>a</span><span>t</span>
-          <span>e</span>
-          <span>d</span>{" "}
+        <h2>
+        TOP RATED
           <i className="star_1">
-            <RiStarSLine />{" "}
+            <MdStar size={20}/>{" "}
           </i>
-        </h1>
+        </h2>
         {movieLists.topRated && (
           <TopRatedList
             favouriteList={favouriteList}
@@ -99,16 +96,9 @@ const MainSection = ({ modalVisibility, TopRated, UpComing, ScrollTop }) => {
       </div>
       <div className="UpComing_Section" ref={UpComing}>
         {" "}
-        <h1>
-          {" "}
-          <span>U</span>
-          <span>P</span> <span>C</span>
-          <span>o</span>
-          <span>M</span>
-          <span>I</span>
-          <span>N</span>
-          <span>G</span>
-        </h1>
+        <h2>
+     UP COMING
+        </h2>
         {movieLists.upcoming && (
           <UpComingList
             favouriteList={favouriteList}
